@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="action_settings">Settings</string>
+    <string name="fn">Doluluk Oranları</string>
+    <string name="nr">Yeni Sefer İstekleri</string>
+    <string name="rq">Yeni Hat İstekleri</string>
+    <string name="fv">Favori Seferlerim</string>
+    <string name="cp">Şikayet Et</string>
+    <string name="st">Ayarlar</string>
+    <string name="lo">Çıkış Yap</string>
+</resources>

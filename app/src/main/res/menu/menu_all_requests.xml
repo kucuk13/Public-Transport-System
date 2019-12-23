@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.project.AllRequestsActivity">
+
+    <item
+        android:id="@+id/fullness"
+        android:orderInCategory="100"
+        android:title="@string/fn"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/new_request"
+        android:orderInCategory="100"
+        android:title="@string/nr"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/all_requests"
+        android:orderInCategory="100"
+        android:title="@string/rq"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/favourite"
+        android:orderInCategory="100"
+        android:title="@string/fv"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/complaint"
+        android:orderInCategory="100"
+        android:title="@string/cp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="100"
+        android:title="@string/st"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="@string/lo"
+        app:showAsAction="never" />
+
+</menu>
