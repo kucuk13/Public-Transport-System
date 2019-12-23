@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class ComplaintAcitivity extends AppCompatActivity {
+public class ComplaintActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,25 +27,25 @@ public class ComplaintAcitivity extends AppCompatActivity {
         int id = item.getItemId();
         Intent intent;
         if (id == R.id.fullness) {
-            intent = new Intent(ComplaintAcitivity.this, FullnessActivity.class);
+            intent = new Intent(ComplaintActivity.this, FullnessActivity.class);
             startActivity(intent);
         } else if (id == R.id.new_request) {
-            intent = new Intent(ComplaintAcitivity.this, NewRequestActivity.class);
+            intent = new Intent(ComplaintActivity.this, NewRequestActivity.class);
             startActivity(intent);
         } else if (id == R.id.all_requests) {
-            intent = new Intent(ComplaintAcitivity.this, AllRequestsActivity.class);
+            intent = new Intent(ComplaintActivity.this, AllRequestsActivity.class);
             startActivity(intent);
         } else if (id == R.id.favourite) {
-            intent = new Intent(ComplaintAcitivity.this, FavouriteActivity.class);
+            intent = new Intent(ComplaintActivity.this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.complaint) {
-            intent = new Intent(ComplaintAcitivity.this, ComplaintAcitivity.class);
+            intent = new Intent(ComplaintActivity.this, ComplaintActivity.class);
             startActivity(intent);
         } else if (id == R.id.settings) {
-            intent = new Intent(ComplaintAcitivity.this, SettingsActivity.class);
+            intent = new Intent(ComplaintActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.logout) {
-            intent = new Intent(ComplaintAcitivity.this, MainActivity.class);
+            intent = new Intent(ComplaintActivity.this, MainActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

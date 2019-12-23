@@ -39,7 +39,7 @@ public class FullnessActivity extends AppCompatActivity {
             intent = new Intent(FullnessActivity.this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.complaint) {
-            intent = new Intent(FullnessActivity.this, ComplaintAcitivity.class);
+            intent = new Intent(FullnessActivity.this, ComplaintActivity.class);
             startActivity(intent);
         } else if (id == R.id.settings) {
             intent = new Intent(FullnessActivity.this, SettingsActivity.class);

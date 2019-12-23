@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(MainActivity.this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.complaint) {
-            intent = new Intent(MainActivity.this, ComplaintAcitivity.class);
+            intent = new Intent(MainActivity.this, ComplaintActivity.class);
             startActivity(intent);
         } else if (id == R.id.settings) {
             intent = new Intent(MainActivity.this, SettingsActivity.class);

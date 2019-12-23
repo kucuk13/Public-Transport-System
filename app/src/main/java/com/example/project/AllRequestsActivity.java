@@ -39,7 +39,7 @@ public class AllRequestsActivity extends AppCompatActivity {
             intent = new Intent(AllRequestsActivity.this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.complaint) {
-            intent = new Intent(AllRequestsActivity.this, ComplaintAcitivity.class);
+            intent = new Intent(AllRequestsActivity.this, ComplaintActivity.class);
             startActivity(intent);
         } else if (id == R.id.settings) {
             intent = new Intent(AllRequestsActivity.this, SettingsActivity.class);

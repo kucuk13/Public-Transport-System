@@ -39,7 +39,7 @@ public class FavouriteActivity extends AppCompatActivity {
             intent = new Intent(FavouriteActivity.this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.complaint) {
-            intent = new Intent(FavouriteActivity.this, ComplaintAcitivity.class);
+            intent = new Intent(FavouriteActivity.this, ComplaintActivity.class);
             startActivity(intent);
         } else if (id == R.id.settings) {
             intent = new Intent(FavouriteActivity.this, SettingsActivity.class);
