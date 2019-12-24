@@ -39,7 +39,7 @@ public class SettingsActivity extends AppCompatActivity {
             intent = new Intent(SettingsActivity.this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.complaint) {
-            intent = new Intent(SettingsActivity.this, ComplaintAcitivity.class);
+            intent = new Intent(SettingsActivity.this, ComplaintActivity.class);
             startActivity(intent);
         } else if (id == R.id.settings) {
             intent = new Intent(SettingsActivity.this, SettingsActivity.class);

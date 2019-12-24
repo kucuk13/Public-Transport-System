@@ -12,7 +12,7 @@ public class ComplaintActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Şikayet Er");
+        getSupportActionBar().setTitle("Şikayet Et");
         setContentView(R.layout.activity_complaint);
     }
 
