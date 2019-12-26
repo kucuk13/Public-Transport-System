@@ -10,23 +10,23 @@
     tools:showIn="@layout/activity_main">
 
     <Button
-        android:id="@+id/button_signup"
+        android:id="@+id/buttonOpenSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/su"
+        android:text="@string/buttonOpenSignup"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.62"
-        app:layout_constraintStart_toEndOf="@+id/button_login"
+        app:layout_constraintStart_toEndOf="@+id/buttonOpenLogin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/buttonOpenLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/li"
+        android:text="@string/buttonOpenLogin"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

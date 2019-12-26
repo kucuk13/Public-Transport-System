@@ -4,24 +4,35 @@
     <string name="fn">Doluluk Oranları</string>
     <string name="nr">Yeni İstek Ekle</string>
     <string name="rq">Tüm İstekler</string>
-    <string name="fv">Favori  Seferlerim</string>
+    <string name="fv">Takip Ettiğim Seferler</string>
     <string name="cp">Şikayet Et</string>
     <string name="st">Ayarlar</string>
     <string name="lo">Çıkış Yap</string>
-    <string name="li">Giriş Yap</string>
-    <string name="su">Kayıt Ol</string>
-
-    <string name="expedition">Sefer No:</string>
-    <string name="stop">Durak No:</string>
+    <string name="buttonOpenLogin">Giriş Yap</string>
+    <string name="buttonOpenSignup">Kayıt Ol</string>
+    <string name="imgDescription"> </string>
+    <string name="textViewExpeditionNo">Sefer No:</string>
+    <string name="textViewStopNo">Durak No:</string>
     <string name="empty">Çok Sayıda Boş Koltuk</string>
     <string name="littleEmpty">Az Sayıda Boş Koltuk</string>
     <string name="onlyStanding">Sadece Ayakta Yolcu</string>
     <string name="full">Dolu</string>
-    <string name="search">Ara</string>
-    <string name="time">10 dk sonra gelecek.</string>
+    <string name="buttonSearch">Ara</string>
+    <string name="textViewWhenComes">10 dk sonra gelecek.</string>
+    <string name="textViewWhereFrom">Nereden</string>
+    <string name="textViewWhereTo">Nereye</string>
+    <string name="textViewNumber">0</string>
+    <string name="buttonNewRequest">Oluştur</string>
+    <string name="textViewUserName">Kullanıcı Adı: </string>
+    <string name="textViewMail">Mail: </string>
+    <string name="textViewTel">Telefon: </string>
+    <string name="textViewPassword">Şifre: </string>
+    <string name="textViewPassAgain">Şifre Tekrar: </string>
+    <string name="buttonRegister">Kaydol</string>
+    <string name="buttonLogin">Giriş</string>
+    <string name="buttonUpdate">Güncelle</string>
+    <string name="buttonComplain">Şikayet Et</string>
+    <string name="buttonFollow">Seferi Takip Et</string>
 
-    <string name="whereFrom">Nereden</string>
-    <string name="whereTo">Nereye</string>
-    <string name="save">Oluştur</string>
 
 </resources>

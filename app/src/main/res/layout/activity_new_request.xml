@@ -7,7 +7,7 @@
     tools:context="com.example.project.NewRequestActivity">
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editTextWhereTo"
         android:layout_width="372dp"
         android:layout_height="54dp"
         android:ems="10"
@@ -16,27 +16,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWhereTo"
         app:layout_constraintVertical_bias="0.04" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textViewWhereTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/whereTo"
+        android:text="@string/textViewWhereTo"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWhereFrom"
         app:layout_constraintVertical_bias="0.033" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textViewWhereFrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/whereFrom"
+        android:text="@string/textViewWhereFrom"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextWhereFrom"
         android:layout_width="372dp"
         android:layout_height="54dp"
         android:ems="10"
@@ -55,19 +55,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWhereFrom"
         app:layout_constraintVertical_bias="0.027" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonNewRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/save"
+        android:text="@string/buttonNewRequest"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWhereTo"
         app:layout_constraintVertical_bias="0.047" />
 </androidx.constraintlayout.widget.ConstraintLayout>

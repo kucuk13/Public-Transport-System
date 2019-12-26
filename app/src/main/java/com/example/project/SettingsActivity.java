@@ -6,14 +6,48 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
+
+    DatabaseHelper mydb;
+    EditText editTextUserName, editTextMail, editTextTel, editTextPass, editTextPassAgain, editTextID;
+    Button buttonUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Ayarlar");
         setContentView(R.layout.activity_settings);
+        mydb = new DatabaseHelper(this);
+        editTextUserName = findViewById(R.id.editTextUpdateUser);
+        editTextMail = findViewById(R.id.editTextUpdateMail);
+        editTextTel = findViewById(R.id.editTextUpdateTel);
+        editTextPass = findViewById(R.id.editTextUpdatePass);
+        editTextPassAgain = findViewById(R.id.editTextUpdateID);
+        buttonUpdate = findViewById(R.id.buttonUpdate);
+        buttonUpdate.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isUpdated = mydb.updateUser(editTextID.getText().toString(),
+                                editTextUserName.getText().toString(),
+                                editTextMail.getText().toString(),
+                                editTextPass.getText().toString(),
+                                editTextTel.getText().toString());
+                        if (isUpdated){
+                            Toast.makeText(SettingsActivity.this, "Data Updated", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(SettingsActivity.this, "Data NOT Updated", Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                }
+        );
+
     }
 
     @Override
