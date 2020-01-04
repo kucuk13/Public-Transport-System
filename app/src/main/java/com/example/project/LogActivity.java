@@ -38,7 +38,7 @@ public class LogActivity extends AppCompatActivity {
                         while(res.moveToNext()){
                             if (res.getString(2).equals(Mail.getText().toString())){
                                 if (res.getString(3).equals(password.getText().toString())){
-                                    Toast.makeText(LogActivity.this, "Hoşgeldin " + res.getString(0) + "!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(LogActivity.this, "Hoşgeldin " + res.getString(1) + "!", Toast.LENGTH_LONG).show();
                                     isNotFind = false;
                                     break;
                                 }

@@ -27,7 +27,7 @@ public class SettingsActivity extends AppCompatActivity {
         editTextMail = findViewById(R.id.editTextUpdateMail);
         editTextTel = findViewById(R.id.editTextUpdateTel);
         editTextPass = findViewById(R.id.editTextUpdatePass);
-        editTextPassAgain = findViewById(R.id.editTextUpdateID);
+        editTextID = findViewById(R.id.editTextUpdateID);
         buttonUpdate = findViewById(R.id.buttonUpdate);
         buttonUpdate.setOnClickListener(
                 new View.OnClickListener() {
