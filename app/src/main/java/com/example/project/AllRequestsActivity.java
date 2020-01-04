@@ -1,32 +1,39 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
-
 import java.util.ArrayList;
 
 public class AllRequestsActivity extends AppCompatActivity {
-    ListView listView;
-    final ArrayList<Request> requests = new ArrayList<Request>();
+
+    final ArrayList<Request> requests = new ArrayList<>();
+    RecyclerView recyclerView;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Tüm İstekler");
         setContentView(R.layout.activity_all_requests);
-        listView = findViewById(R.id.listViewRequests);
-        requests.add(new Request("Beşevler Metro", "Hastane", 1, R.drawable.star));
-        requests.add(new Request("Gazi Üniversitesi", "Aşti", 3, R.drawable.star));
-        RequestAdapter requestAdapter = new RequestAdapter(this, requests);
-        if (listView != null) {
-            listView.setAdapter(requestAdapter);
+        recyclerView = findViewById(R.id.recyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.scrollToPosition(0);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        requests.add(new Request("Hastane", "aa", "5", R.drawable.star));
+        requests.add(new Request("Sinema", "bb", "2", R.drawable.star));
+        if (recyclerView != null) {
+            RequestAdapter requestAdapter = new RequestAdapter(requests, context);
+            recyclerView.setAdapter(requestAdapter);
         }
-
-
     }
 
     @Override

@@ -5,7 +5,7 @@
     <string name="nr">Yeni İstek Ekle</string>
     <string name="rq">Tüm İstekler</string>
     <string name="fv">Takip Ettiğim Seferler</string>
-    <string name="cp">Şikayet Et</string>
+    <string name="cp">İletişim</string>
     <string name="st">Ayarlar</string>
     <string name="lo">Çıkış Yap</string>
     <string name="buttonOpenLogin">Giriş Yap</string>
@@ -31,8 +31,12 @@
     <string name="buttonRegister">Kaydol</string>
     <string name="buttonLogin">Giriş</string>
     <string name="buttonUpdate">Güncelle</string>
-    <string name="buttonComplain">Şikayet Et</string>
+    <string name="buttonCommunication">Gönder</string>
     <string name="buttonFollow">Seferi Takip Et</string>
+    <string-array name="mailType">
+        <item>Öneri</item>
+        <item>Şikayet</item>
+    </string-array>
 
 
 </resources>

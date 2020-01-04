@@ -1,44 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:contentDescription="@string/imgDescription">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="5dp"
+    android:layout_margin="3dp"
+    android:id="@+id/linear"
+    android:padding="5dp">
 
-    <TextView
-        android:id="@+id/textViewTo"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/textViewWhereFrom"
-        android:textSize="24sp" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textViewFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewTo"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="20dp"
-        android:text="@string/textViewWhereTo"
-        android:textSize="24sp" />
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageViewStar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/imgDescription"
-        app:srcCompat="@drawable/star" />
+            <TextView
+                android:id="@+id/textViewWhereFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:textColor="@color/mr_cast_meta_default_text_color"
+                android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textViewNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="370dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/textViewNumber"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp" />
-</RelativeLayout>
+            <TextView
+                android:id="@+id/textViewWhereTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/imgDescription"
+                android:padding="2dp"
+                android:textColor="@color/mr_cast_meta_default_text_color"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewStar"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/imgDescription"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/textViewNumber"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:textColor="@color/mr_cast_meta_default_text_color"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
