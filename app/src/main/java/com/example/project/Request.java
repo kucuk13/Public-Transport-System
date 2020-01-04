@@ -4,10 +4,10 @@ public class Request {
 
     String from;
     String to;
-    String number;
+    int number;
     int img;
 
-    public Request(String from, String to, String number, int img) {
+    public Request(String from, String to, int number, int img) {
         setFrom(from);
         setTo(to);
         setNumber(number);
@@ -31,10 +31,10 @@ public class Request {
     }
 
     public String getNumber() {
-        return number;
+        return Integer.toString(number);
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
