@@ -54,6 +54,7 @@ public class AllRequestsActivity extends AppCompatActivity {
             intent = new Intent(AllRequestsActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.logout) {
+            new Person();
             intent = new Intent(AllRequestsActivity.this, MainActivity.class);
             startActivity(intent);
         }

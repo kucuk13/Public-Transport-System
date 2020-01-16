@@ -9,12 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
 
     DatabaseHelper mydb;
-    EditText editTextUserName, editTextMail, editTextTel, editTextPass, editTextPassAgain, editTextID;
+    EditText editTextUserName, editTextMail, editTextTel, editTextPass;
     Button buttonUpdate;
 
     @Override
@@ -27,13 +28,18 @@ public class SettingsActivity extends AppCompatActivity {
         editTextMail = findViewById(R.id.editTextUpdateMail);
         editTextTel = findViewById(R.id.editTextUpdateTel);
         editTextPass = findViewById(R.id.editTextUpdatePass);
-        editTextID = findViewById(R.id.editTextUpdateID);
+
+        editTextUserName.setText(Person.name.toCharArray(), 0,  Person.name.length());
+        editTextMail.setText(Person.email.toCharArray(), 0, Person.email.length());
+        editTextTel.setText(Person.tel.toCharArray(), 0, Person.tel.length());
+        editTextPass.setText(Person.password.toCharArray(), 0, Person.password.length());
+
         buttonUpdate = findViewById(R.id.buttonUpdate);
         buttonUpdate.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean isUpdated = mydb.updateUser(editTextID.getText().toString(),
+                        boolean isUpdated = mydb.updateUser(Person.id,
                                 editTextUserName.getText().toString(),
                                 editTextMail.getText().toString(),
                                 editTextPass.getText().toString(),
@@ -79,6 +85,7 @@ public class SettingsActivity extends AppCompatActivity {
             intent = new Intent(SettingsActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.logout) {
+            new Person();
             intent = new Intent(SettingsActivity.this, MainActivity.class);
             startActivity(intent);
         }

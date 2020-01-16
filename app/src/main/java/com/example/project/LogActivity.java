@@ -2,17 +2,20 @@ package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.database.Cursor;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LogActivity extends AppCompatActivity {
 
     DatabaseHelper mydb;
     EditText Mail, password;
+    TextView id;
     Button buttonLogin;
 
     @Override
@@ -40,6 +43,11 @@ public class LogActivity extends AppCompatActivity {
                                 if (res.getString(3).equals(password.getText().toString())){
                                     Toast.makeText(LogActivity.this, "Hoşgeldin " + res.getString(1) + "!", Toast.LENGTH_LONG).show();
                                     isNotFind = false;
+                                    new Person(res.getString(0),
+                                            res.getString(1),
+                                            res.getString(2),
+                                            res.getString(3),
+                                            res.getString(4));
                                     break;
                                 }
                             }
@@ -57,6 +65,9 @@ public class LogActivity extends AppCompatActivity {
                         if (isNotFind){
                             Toast.makeText(LogActivity.this, "Tekrar Deneyin!", Toast.LENGTH_LONG).show();
                         }
+                        Intent intent = new Intent(LogActivity.this, MainActivity.class);
+                        startActivity(intent);
+
                     }
                 }
         );

@@ -58,6 +58,7 @@ public class FavouriteActivity extends AppCompatActivity {
             intent = new Intent(FavouriteActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.logout) {
+            new Person();
             intent = new Intent(FavouriteActivity.this, MainActivity.class);
             startActivity(intent);
         }

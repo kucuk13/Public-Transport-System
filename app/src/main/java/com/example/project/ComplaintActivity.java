@@ -73,6 +73,7 @@ public class ComplaintActivity extends AppCompatActivity {
             intent = new Intent(ComplaintActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.logout) {
+            new Person();
             intent = new Intent(ComplaintActivity.this, MainActivity.class);
             startActivity(intent);
         }

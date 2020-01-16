@@ -17,7 +17,7 @@
     <string name="littleEmpty">Az Sayıda Boş Koltuk</string>
     <string name="onlyStanding">Sadece Ayakta Yolcu</string>
     <string name="full">Dolu</string>
-    <string name="buttonSearch">Ara</string>
+    <string name="buttonShow">Göster</string>
     <string name="textViewWhenComes">10 dk sonra gelecek.</string>
     <string name="textViewWhereFrom">Nereden</string>
     <string name="textViewWhereTo">Nereye</string>
