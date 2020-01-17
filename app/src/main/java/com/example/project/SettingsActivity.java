@@ -45,9 +45,16 @@ public class SettingsActivity extends AppCompatActivity {
                                 editTextPass.getText().toString(),
                                 editTextTel.getText().toString());
                         if (isUpdated){
-                            Toast.makeText(SettingsActivity.this, "Data Updated", Toast.LENGTH_LONG).show();
+                            new Person(Person.id,
+                                    editTextUserName.getText().toString(),
+                                    editTextMail.getText().toString(),
+                                    editTextPass.getText().toString(),
+                                    editTextTel.getText().toString());
+                            Toast.makeText(SettingsActivity.this, "Güncellendi.", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(SettingsActivity.this, Main2Activity.class);
+                            startActivity(intent);
                         } else {
-                            Toast.makeText(SettingsActivity.this, "Data NOT Updated", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SettingsActivity.this, "Bir şeyler ters gitti.", Toast.LENGTH_LONG).show();
                         }
 
                     }

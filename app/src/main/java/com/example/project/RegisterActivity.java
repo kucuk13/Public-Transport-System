@@ -38,12 +38,18 @@ public class RegisterActivity extends AppCompatActivity {
                                 editTextPassAgain.getText().toString(),
                                 editTextTel.getText().toString());
                         if (isInserted){
-                            Toast.makeText(RegisterActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                            new Person(mydb.getID( editTextMail.getText().toString()),
+                                    editTextUserName.getText().toString(),
+                                    editTextMail.getText().toString(),
+                                    editTextPass.getText().toString(),
+                                    editTextTel.getText().toString());
+                            Toast.makeText(RegisterActivity.this, "Başarıyla kayıt oldunuz.", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(RegisterActivity.this, Main2Activity.class);
+                            startActivity(intent);
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "Bir şeyler ters gitti.", Toast.LENGTH_LONG).show();
                         }
-                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                        startActivity(intent);
+
                     }
                 }
         );

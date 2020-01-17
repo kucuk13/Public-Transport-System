@@ -68,6 +68,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
+    public String getID(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME, null);
+        while (res.moveToNext()){
+            if(res.getString(2).equals(email)){
+                return res.getString(0);
+            }
+        }
+        return null;
+    }
+
     public boolean updateUser(String id, String user_name, String mail, String password, String tel){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
