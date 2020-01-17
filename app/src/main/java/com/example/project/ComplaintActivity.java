@@ -52,31 +52,8 @@ public class ComplaintActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        Intent intent;
-        if (id == R.id.fullness) {
-            intent = new Intent(ComplaintActivity.this, FullnessActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.new_request) {
-            intent = new Intent(ComplaintActivity.this, NewRequestActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.all_requests) {
-            intent = new Intent(ComplaintActivity.this, AllRequestsActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.favourite) {
-            intent = new Intent(ComplaintActivity.this, FavouriteActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.complaint) {
-            intent = new Intent(ComplaintActivity.this, ComplaintActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.settings) {
-            intent = new Intent(ComplaintActivity.this, SettingsActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.logout) {
-            new Person();
-            intent = new Intent(ComplaintActivity.this, MainActivity.class);
-            startActivity(intent);
-        }
+        Intent intent = MyMenu.menuClick(item, ComplaintActivity.this);
+        startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
 

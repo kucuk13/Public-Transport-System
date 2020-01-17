@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Hoşgeldiniz");
+        new Person();
 
         Button li = findViewById(R.id.buttonOpenLogin);
         li.setOnClickListener(new View.OnClickListener() {
@@ -57,44 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        Intent intent;
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.fullness) {
-            intent = new Intent(MainActivity.this, FullnessActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.new_request) {
-                intent = new Intent(MainActivity.this, NewRequestActivity.class);
-                startActivity(intent);
-        } else if (id == R.id.all_requests) {
-            intent = new Intent(MainActivity.this, AllRequestsActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.favourite) {
-            intent = new Intent(MainActivity.this, FavouriteActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.complaint) {
-            intent = new Intent(MainActivity.this, ComplaintActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.settings) {
-            intent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.logout) {
-            intent = new Intent(MainActivity.this, MainActivity.class);
-            startActivity(intent);
-        }
-
+        Intent intent = MyMenu.menuClick(item, MainActivity.this);
+        startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
 }

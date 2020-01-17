@@ -24,31 +24,8 @@ public class FullnessActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        Intent intent;
-        if (id == R.id.fullness) {
-            intent = new Intent(FullnessActivity.this, FullnessActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.new_request) {
-            intent = new Intent(FullnessActivity.this, NewRequestActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.all_requests) {
-            intent = new Intent(FullnessActivity.this, AllRequestsActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.favourite) {
-            intent = new Intent(FullnessActivity.this, FavouriteActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.complaint) {
-            intent = new Intent(FullnessActivity.this, ComplaintActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.settings) {
-            intent = new Intent(FullnessActivity.this, SettingsActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.logout) {
-            new Person();
-            intent = new Intent(FullnessActivity.this, MainActivity.class);
-            startActivity(intent);
-        }
+        Intent intent = MyMenu.menuClick(item, FullnessActivity.this);
+        startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
 
