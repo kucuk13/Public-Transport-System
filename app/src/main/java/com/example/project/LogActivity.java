@@ -65,7 +65,7 @@ public class LogActivity extends AppCompatActivity {
                         if (isNotFind){
                             Toast.makeText(LogActivity.this, "Tekrar Deneyin!", Toast.LENGTH_LONG).show();
                         }
-                        Intent intent = new Intent(LogActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LogActivity.this, Main2Activity.class);
                         startActivity(intent);
 
                     }

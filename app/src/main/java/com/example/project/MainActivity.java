@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 
 
@@ -26,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Hoşgeldiniz");
         new Person();
 
-        Button li = findViewById(R.id.buttonOpenLogin);
-        li.setOnClickListener(new View.OnClickListener() {
+        Button login = findViewById(R.id.buttonOpenLogin);
+        login.setVisibility(View.VISIBLE);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LogActivity.class));
@@ -35,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button sp = findViewById(R.id.buttonOpenSignup);
-        sp.setOnClickListener(new View.OnClickListener() {
+        Button signup = findViewById(R.id.buttonOpenSignup);
+        signup.setVisibility(View.VISIBLE);
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RegisterActivity.class));
@@ -53,18 +53,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = MyMenu.menuClick(item, MainActivity.this);
-        startActivity(intent);
-        return super.onOptionsItemSelected(item);
-    }
 }
