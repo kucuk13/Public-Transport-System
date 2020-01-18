@@ -20,7 +20,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hoşgeldiniz");
+        getSupportActionBar().setTitle("Toplu Taşıma");
 
         Button li = findViewById(R.id.buttonOpenLogin);
         Button sp = findViewById(R.id.buttonOpenSignup);

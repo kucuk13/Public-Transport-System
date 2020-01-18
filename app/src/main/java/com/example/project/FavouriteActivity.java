@@ -19,14 +19,12 @@ public class FavouriteActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Takip Ettiğim Seferler");
         setContentView(R.layout.activity_favourite);
         listView = findViewById(R.id.listViewFans);
-        fans.add(new Fan("1234"));
-        fans.add(new Fan("5678"));
-        fans.add(new Fan("9870"));
+        fans.add(new Fan("101"));
+        fans.add(new Fan("104"));
         FanAdapter fanAdapter = new FanAdapter(this, fans);
         if (listView != null) {
             listView.setAdapter(fanAdapter);
         }
-
     }
 
     @Override

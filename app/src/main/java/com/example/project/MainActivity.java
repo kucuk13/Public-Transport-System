@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hoşgeldiniz");
+        getSupportActionBar().setTitle("Hoş Geldiniz.");
         new Person();
 
         Button login = findViewById(R.id.buttonOpenLogin);

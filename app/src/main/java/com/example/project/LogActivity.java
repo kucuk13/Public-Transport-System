@@ -41,13 +41,15 @@ public class LogActivity extends AppCompatActivity {
                         while(res.moveToNext()){
                             if (res.getString(2).equals(Mail.getText().toString())){
                                 if (res.getString(3).equals(password.getText().toString())){
-                                    Toast.makeText(LogActivity.this, "Hoşgeldin " + res.getString(1) + "!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(LogActivity.this, "Merhaba " + res.getString(1) + "!", Toast.LENGTH_LONG).show();
                                     isNotFind = false;
                                     new Person(res.getString(0),
                                             res.getString(1),
                                             res.getString(2),
                                             res.getString(3),
                                             res.getString(4));
+                                    Intent intent = new Intent(LogActivity.this, Main2Activity.class);
+                                    startActivity(intent);
                                     break;
                                 }
                             }
@@ -65,8 +67,7 @@ public class LogActivity extends AppCompatActivity {
                         if (isNotFind){
                             Toast.makeText(LogActivity.this, "Tekrar Deneyin!", Toast.LENGTH_LONG).show();
                         }
-                        Intent intent = new Intent(LogActivity.this, Main2Activity.class);
-                        startActivity(intent);
+
 
                     }
                 }
